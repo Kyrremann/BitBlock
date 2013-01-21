@@ -81,6 +81,7 @@ void mousePressed() {
 }
 
 void keyPressed() {
+  System.out.println(keyCode);
 
   if (!i.menu && gameState == 0) {
     i.anyButton();
@@ -100,6 +101,7 @@ void keyPressed() {
     case RIGHT:
       i.menuRight();
       break;
+    case 32:
     case ENTER:
       i.menuEnter();
       break;
@@ -121,15 +123,19 @@ void keyPressed() {
   }
 
   switch (keyCode) {
+  case LEFT:
   case '1':
     p.changeColor(0, cbox.get(0).r, cbox.get(0).g, cbox.get(0).b);
     break;
+  case UP:
   case '2':
     p.changeColor(0, cbox.get(1).r, cbox.get(1).g, cbox.get(1).b);
     break;
+  case RIGHT:
   case '3':
     p.changeColor(0, cbox.get(2).r, cbox.get(2).g, cbox.get(2).b);
     break;
+  case DOWN:
   case '4':
     p.changeColor(0, cbox.get(3).r, cbox.get(3).g, cbox.get(3).b);
     break;
